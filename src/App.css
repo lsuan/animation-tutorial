@@ -1,0 +1,55 @@
+@keyframes shrink {
+  from {
+    height: 3rem;
+  }
+  to {
+    height: 2rem;
+  }
+}
+
+@keyframes expand {
+  from {
+    height: 2rem;
+  }
+  to {
+    height: 3rem;
+  }
+}
+
+#root {
+  width: 100%;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.square {
+  background-color: #7a7a7a;
+  height: 2rem;
+  width: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  border-color: none;
+  animation: shrink ease-in-out 0.5s;
+}
+
+.square:focus {
+  background-color: black;
+  height: 3rem;
+  animation: expand ease-in-out 0.5s;
+}
+
+button {
+  all: unset;
+}
